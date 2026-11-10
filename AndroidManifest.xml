@@ -1,0 +1,24 @@
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+<application ...>
+    <activity android:name=".MainActivity"
+        android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+
+    <!-- Servicio VPN local de red -->
+    <service android:name=".MyVpnService"
+        android:permission="android.permission.BIND_VPN_SERVICE"
+        android:exported="true">
+        <intent-filter>
+            <action android:name="android.net.VpnService" />
+        </intent-filter>
+    </service>
+
+    <!-- Servicio de la interfaz flotante -->
+    <service android:name=".FloatingControlService"
+        android:exported="false" />
+</application>
