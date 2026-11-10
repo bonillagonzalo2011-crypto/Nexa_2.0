@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp"
+    app:cardBackgroundColor="#222222"
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:gravity="center"
+        android:focusable="false">
+
+        <!-- Botón 1: Freezer (Pausa total) -->
+        <ImageButton
+            android:id="@+id/btnFreezer"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_media_pause"
+            app:tint="#FF5252"
+            android:contentDescription="Freezer"
+            android:layout_marginEnd="6dp" />
+
+        <!-- Botón 2: Teleport (Retardo controlado) -->
+        <ImageButton
+            android:id="@+id/btnTeleport"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_send"
+            app:tint="#448AFF"
+            android:contentDescription="Teleport"
+            android:layout_marginEnd="6dp" />
+
+        <!-- Botón 3: Blinker (Intermitencia) -->
+        <ImageButton
+            android:id="@+id/btnBlinker"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_popup_sync"
+            app:tint="#69F0AE"
+            android:contentDescription="Blinker" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
